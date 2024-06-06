@@ -24,6 +24,7 @@
 		0C1CE22A2C0F43F100A45F61 /* ICCMonoFont-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C1CE2192C0F43F100A45F61 /* ICCMonoFont-Italic.ttf */; };
 		0C1CE22B2C0F43F100A45F61 /* ICCMonoFont-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C1CE21A2C0F43F100A45F61 /* ICCMonoFont-Bold.ttf */; };
 		0C8B04502C11916200A8DDC0 /* SIFeedsDetailsListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B044F2C11916200A8DDC0 /* SIFeedsDetailsListing.swift */; };
+		0C8B04542C11C2EB00A8DDC0 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B04532C11C2EB00A8DDC0 /* PhotoDetailView.swift */; };
 		0CB9AFD82C10554400FACD16 /* CommonUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9AFD72C10554400FACD16 /* CommonUtilities.swift */; };
 		0CEDC7612C0EF6150062523F /* PBKSPhotosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEDC7602C0EF6150062523F /* PBKSPhotosApp.swift */; };
 		0CEDC7632C0EF6150062523F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEDC7622C0EF6150062523F /* ContentView.swift */; };
@@ -57,6 +58,7 @@
 		0C1CE2192C0F43F100A45F61 /* ICCMonoFont-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ICCMonoFont-Italic.ttf"; sourceTree = "<group>"; };
 		0C1CE21A2C0F43F100A45F61 /* ICCMonoFont-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ICCMonoFont-Bold.ttf"; sourceTree = "<group>"; };
 		0C8B044F2C11916200A8DDC0 /* SIFeedsDetailsListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIFeedsDetailsListing.swift; sourceTree = "<group>"; };
+		0C8B04532C11C2EB00A8DDC0 /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
 		0CB9AFD72C10554400FACD16 /* CommonUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtilities.swift; sourceTree = "<group>"; };
 		0CEDC75D2C0EF6150062523F /* PBKSPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PBKSPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CEDC7602C0EF6150062523F /* PBKSPhotosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBKSPhotosApp.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				0CB9AFDE2C10787300FACD16 /* CommonUtilities */,
 				0CB9AFD92C1055B200FACD16 /* Font */,
 				0CEDC7642C0EF6160062523F /* Assets.xcassets */,
+				0C8B04532C11C2EB00A8DDC0 /* PhotoDetailView.swift */,
 			);
 			path = PBKSPhotos;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				0CB9AFD82C10554400FACD16 /* CommonUtilities.swift in Sources */,
 				0CEDC7782C0F2F880062523F /* SIFeedsListing.swift in Sources */,
 				0CEDC7632C0EF6150062523F /* ContentView.swift in Sources */,
+				0C8B04542C11C2EB00A8DDC0 /* PhotoDetailView.swift in Sources */,
 				0CEDC7722C0EFFAD0062523F /* SmallContentCell.swift in Sources */,
 				0CEDC7612C0EF6150062523F /* PBKSPhotosApp.swift in Sources */,
 				0CEDC77C2C0F3E250062523F /* AppColors.swift in Sources */,
