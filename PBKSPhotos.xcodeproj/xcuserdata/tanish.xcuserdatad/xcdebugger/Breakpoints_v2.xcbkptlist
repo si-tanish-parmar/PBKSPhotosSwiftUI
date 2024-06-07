@@ -7,17 +7,127 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "20BD3224-33DE-44AC-8B71-1A81B17C9C5E"
+            uuid = "02E4B4D8-2C8B-4522-A182-6AB201299B70"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PBKSPhotos/ViewModel/PhotosViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "fetchDetail(detailURL:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "02E4B4D8-2C8B-4522-A182-6AB201299B70 - 8f37f481d266e5c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for PBKSPhotos.PhotosViewModel.fetchDetail(detailURL: Swift.String) async -&gt; ()"
+                  moduleName = "PBKSPhotos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanish/Documents/SwiftUI/PBKSPhotosModule/PBKSPhotos/ViewModel/PhotosViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "3188">
+               </Location>
+               <Location
+                  uuid = "02E4B4D8-2C8B-4522-A182-6AB201299B70 - 8f37f481d266e5c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for PBKSPhotos.PhotosViewModel.fetchDetail(detailURL: Swift.String) async -&gt; ()"
+                  moduleName = "PBKSPhotos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanish/Documents/SwiftUI/PBKSPhotosModule/PBKSPhotos/ViewModel/PhotosViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "02E4B4D8-2C8B-4522-A182-6AB201299B70 - 8f37f481d266e5c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for PBKSPhotos.PhotosViewModel.fetchDetail(detailURL: Swift.String) async -&gt; ()"
+                  moduleName = "PBKSPhotos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanish/Documents/SwiftUI/PBKSPhotosModule/PBKSPhotos/ViewModel/PhotosViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "336">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EEC774FB-1969-492D-9036-395D04B2E898"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PBKSPhotos/PhotoDetailView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "EEC774FB-1969-492D-9036-395D04B2E898 - 41ad49c30afe8fca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.AsyncImage&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.ProgressView&lt;SwiftUI.EmptyView, SwiftUI.EmptyView&gt;&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in PBKSPhotos.PhotoDetailView.body.getter : some"
+                  moduleName = "PBKSPhotos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanish/Documents/SwiftUI/PBKSPhotosModule/PBKSPhotos/PhotoDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "752">
+               </Location>
+               <Location
+                  uuid = "EEC774FB-1969-492D-9036-395D04B2E898 - 41ad49c30afe8fca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.AsyncImage&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.ProgressView&lt;SwiftUI.EmptyView, SwiftUI.EmptyView&gt;&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in PBKSPhotos.PhotoDetailView.body.getter : some"
+                  moduleName = "PBKSPhotos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanish/Documents/SwiftUI/PBKSPhotosModule/PBKSPhotos/PhotoDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "740">
+               </Location>
+               <Location
+                  uuid = "EEC774FB-1969-492D-9036-395D04B2E898 - 41ad49c30afe8fca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.AsyncImage&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.ProgressView&lt;SwiftUI.EmptyView, SwiftUI.EmptyView&gt;&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in PBKSPhotos.PhotoDetailView.body.getter : some"
+                  moduleName = "PBKSPhotos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanish/Documents/SwiftUI/PBKSPhotosModule/PBKSPhotos/PhotoDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "732">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

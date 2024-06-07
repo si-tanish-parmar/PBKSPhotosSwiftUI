@@ -22,3 +22,8 @@ func constructImageURL(baseURL: String, imagePath: String, imageName: String) ->
         .replacingOccurrences(of: "{image_name}", with: imageName)
     return updatedURL
 }
+
+func constructDetailURL(baseDetailURL: String, titleAlias: String) -> String{
+    let updatedURL = baseDetailURL.replacingOccurrences(of: "{title_alias}", with: titleAlias)
+    return updatedURL
+}

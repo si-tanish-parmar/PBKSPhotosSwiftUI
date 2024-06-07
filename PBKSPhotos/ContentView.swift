@@ -13,6 +13,7 @@ struct ContentView: View {
     
     @State private var selectedDate: String?
     @State private var selectedHeadline: String?
+    @State private var selectedTitleAlias: String?
     @State private var isDetailViewPresented = false
     
     var body: some View {
@@ -37,6 +38,7 @@ struct ContentView: View {
                                         .onTapGesture {
                                             selectedDate = formatDateString(item.publishedDate ?? "")
                                             selectedHeadline = item.assetTitle ?? ""
+                                            selectedTitleAlias = item.titleAlias
                                             isDetailViewPresented.toggle()
                                         }
                                 }
@@ -49,6 +51,7 @@ struct ContentView: View {
                                         .onTapGesture {
                                             selectedDate = formatDateString(item.publishedDate ?? "")
                                             selectedHeadline = item.assetTitle ?? ""
+                                            selectedTitleAlias = item.titleAlias
                                             isDetailViewPresented.toggle()
                                         }
                                 }
@@ -64,11 +67,11 @@ struct ContentView: View {
             }
         }
         .fullScreenCover(isPresented: $isDetailViewPresented) {
-            PhotoDetailView(date: selectedDate ?? "", headline: selectedHeadline ?? "")
+            PhotoDetailView(date: selectedDate ?? "", headline: selectedHeadline ?? "", titleAlias: selectedTitleAlias ?? "")
         }
         .onAppear {
             Task {
-                await viewModel.fetchUser()
+                await viewModel.fetchList()
             }
         }
     }

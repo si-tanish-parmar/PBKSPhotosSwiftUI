@@ -10,12 +10,19 @@ import SwiftUI
 struct PhotoDetailView: View {
     var date: String
     var headline: String
+    var titleAlias: String
     @StateObject private var viewModel = PhotosViewModel()
     let baseURL = "https://www.punjabkingsipl.in/static-assets/waf-images/{image_path}/{image_name}?v=1.04"
+    let detailBaseURL = "https://www.punjabkingsipl.in/apiv3/photo/{title_alias}?is_app=1"
     @Environment(\.presentationMode) var presentationMode
     
+    private var detailURL: String {
+        constructDetailURL(baseDetailURL: detailBaseURL, titleAlias: titleAlias)
+    }
+    
+    
+    
     var body: some View {
-        
         VStack(spacing: 15) {
             HStack(alignment: .center, spacing: 0) {
                 Button("Back") {
@@ -23,10 +30,31 @@ struct PhotoDetailView: View {
                 }
                 Spacer()
             }
-            Image("dummyImage3")
-                .resizable()
+            if let images = viewModel.photosDetail?.content?.data?.images {
+                TabView {
+                    ForEach(images, id: \.data?.imageID) { image in
+                        if let imagePath = image.data?.imagePath, let imageName = image.data?.imageName {
+                            let imageURL = constructImageURL(baseURL: baseURL, imagePath: imagePath, imageName: imageName)
+                            AsyncImage(url: URL(string: imageURL)) { image in
+                                image.resizable()
+                                    .scaledToFill()
+                                    .frame(width: UIScreen.main.bounds.width - 30, height: 225)
+                            } placeholder: {
+                                ProgressView()
+                            }
+                        }
+                    }
+                }
                 .frame(width: UIScreen.main.bounds.width - 30, height: 225)
-            
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+//                .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                .onAppear {
+                    UIPageControl.appearance().currentPageIndicatorTintColor = .red
+                }
+            } else {
+                Text("No images available")
+            }
+
             VStack(spacing: 10) {
                 HStack {
                     Text(date)
@@ -67,7 +95,7 @@ struct PhotoDetailView: View {
                     .scaledToFill()
                     .frame(height: 4)
                 ScrollView {
-                    VStack(spacing: 15){
+                    VStack(spacing: 15) {
                         if let items = viewModel.photos?.content?.items {
                             ForEach(Array(items.enumerated()), id: \.element.assetID) { index, item in
                                 if let imagePath = item.imagePath, let imageName = item.imageFileName {
@@ -81,7 +109,8 @@ struct PhotoDetailView: View {
                     }
                     .onAppear {
                         Task {
-                            await viewModel.fetchUser()
+                            await viewModel.fetchList()
+                            await viewModel.fetchDetail(detailURL: detailURL)
                         }
                     }
                     
@@ -94,5 +123,5 @@ struct PhotoDetailView: View {
 }
 
 #Preview {
-    PhotoDetailView(date: "13 Dec, 2023", headline: "Shikhar Dhawan achieves incredible feat, becomes third batter to slam 50 half-centuries")
+    PhotoDetailView(date: "13 Dec, 2023", headline: "Shikhar Dhawan achieves incredible feat, becomes third batter to slam 50 half-centuries", titleAlias: "hello-world")
 }

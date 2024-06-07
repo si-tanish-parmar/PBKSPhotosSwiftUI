@@ -13,34 +13,42 @@ enum APIServiceError: Error {
     case decodingError(String)
 }
 
-class ServiceManager{
-    private let userAPIEndpointString = "https://www.punjabkingsipl.in/apiv3/listing?entities=4,2&otherent=&exclent=9362&pgnum=1&inum=10&pgsize=10"
+private let listingURL = "https://www.punjabkingsipl.in/apiv3/listing?entities=4,2&otherent=&exclent=9362&pgnum=1&inum=10&pgsize=10"
+
+import Foundation
+
+class ServiceManager {
+    static let shared = ServiceManager()
+    private let session: URLSession
     
-    func fetchUserData() async throws -> SIFeedsListingModel {
-        guard let userAPIEndpoint = URL(string: userAPIEndpointString) else {
-            throw APIServiceError.invalidURL
-        }
-        
+    init() {
         let sessionConfig = URLSessionConfiguration.default
         sessionConfig.waitsForConnectivity = true
         sessionConfig.allowsConstrainedNetworkAccess = true
         sessionConfig.allowsCellularAccess = true
-        
-        let session = URLSession(configuration: sessionConfig)
-        
-        do {
-            let request = URLRequest(url: userAPIEndpoint)
-            request.httpMethod
-            let (data, response) = try await session.data(for: request)
-            try validateResponse(response)
-            let user = try decodeResponse(data: data)
-            return user
-        } catch {
-            print("Error occurred: \(error.localizedDescription)")
-            throw error
-        }
+        session = URLSession(configuration: sessionConfig)
     }
     
+    func fetchListingData() async throws -> SIFeedsListingModel {
+        let userAPIEndpoint = URL(string: listingURL)!
+        var request = URLRequest(url: userAPIEndpoint)
+        request.httpMethod = "GET"
+        
+        let (data, response) = try await session.data(for: request)
+        try validateResponse(response)
+        return try decodeResponse(data: data)
+    }
+    
+    func fetchDetailData(detailURL: String) async throws -> SIFeedsDetailModel {
+        let userAPIEndpoint = URL(string: detailURL)!
+        var request = URLRequest(url: userAPIEndpoint)
+        request.httpMethod = "GET"
+        
+        let (data, response) = try await session.data(for: request)
+        try validateResponse(response)
+        return try decodeDetailResponse(data: data)
+    }
+
     private func validateResponse(_ response: URLResponse) throws {
         guard let httpResponse = response as? HTTPURLResponse else {
             throw APIServiceError.badServerResponse("Invalid response")
@@ -60,14 +68,11 @@ class ServiceManager{
     
     private func decodeResponse(data: Data) throws -> SIFeedsListingModel {
         let decoder = JSONDecoder()
-        do {
-            return try decoder.decode(SIFeedsListingModel.self, from: data)
-        } catch {
-            let decodingError = "Decoding error: \(error.localizedDescription)"
-            print(decodingError)
-            throw APIServiceError.decodingError(decodingError)
-        }
+        return try decoder.decode(SIFeedsListingModel.self, from: data)
+    }
+    
+    private func decodeDetailResponse(data: Data) throws -> SIFeedsDetailModel {
+        let decoder = JSONDecoder()
+        return try decoder.decode(SIFeedsDetailModel.self, from: data)
     }
 }
-
-
