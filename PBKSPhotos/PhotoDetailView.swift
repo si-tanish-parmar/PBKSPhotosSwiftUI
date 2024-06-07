@@ -24,13 +24,17 @@ struct PhotoDetailView: View {
     
     var body: some View {
         VStack(spacing: 15) {
-            HStack(alignment: .center, spacing: 0) {
-                Button("Back") {
-                    presentationMode.wrappedValue.dismiss()
-                }
-                .foregroundColor(Theme.getColor(named: .white_FFFFFF))
-                Spacer()
-            }
+            NavigationBar(title: "Photos", backButtonAction: {
+                            presentationMode.wrappedValue.dismiss()
+                        })
+           
+//            HStack(alignment: .center, spacing: 0) {
+//                Button("Back") {
+//                    presentationMode.wrappedValue.dismiss()
+//                }
+//                .foregroundColor(Theme.getColor(named: .white_FFFFFF))
+//                Spacer()
+//            }
             .background(Theme.getColor(named: .red_C10004))
             if let images = viewModel.photosDetail?.content?.data?.images {
                 TabView {

@@ -19,12 +19,16 @@ struct ContentView: View {
     var body: some View {
         ScrollView {
             ZStack(alignment: .top) {
-                Image("bg")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: UIScreen.main.bounds.width, height: 250)
-                    .clipped()
-                    .edgesIgnoringSafeArea(.all)
+                VStack(spacing: -5){
+                    NavigationBar(title: "Photos", backButtonAction: {
+                    })
+                    .ignoresSafeArea(.all)
+                    Image("bg")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: UIScreen.main.bounds.width, height: 250)
+                        .clipped()
+                }
                 
                 VStack(spacing: 20) {
                     if let items = viewModel.photos?.content?.items {
@@ -62,7 +66,7 @@ struct ContentView: View {
                             .foregroundColor(.white)
                     }
                 }
-                .padding(.top, 100)
+                .padding(.top, 150)
                 .padding([.horizontal, .bottom], 10)
             }
         }

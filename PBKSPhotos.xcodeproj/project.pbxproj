@@ -23,6 +23,7 @@
 		0C1CE2292C0F43F100A45F61 /* ICCFont-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C1CE2182C0F43F100A45F61 /* ICCFont-BoldItalic.ttf */; };
 		0C1CE22A2C0F43F100A45F61 /* ICCMonoFont-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C1CE2192C0F43F100A45F61 /* ICCMonoFont-Italic.ttf */; };
 		0C1CE22B2C0F43F100A45F61 /* ICCMonoFont-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C1CE21A2C0F43F100A45F61 /* ICCMonoFont-Bold.ttf */; };
+		0C803D642C132EE800282D78 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C803D632C132EE800282D78 /* NavigationBar.swift */; };
 		0C8B04502C11916200A8DDC0 /* SIFeedsDetailsListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B044F2C11916200A8DDC0 /* SIFeedsDetailsListing.swift */; };
 		0C8B04542C11C2EB00A8DDC0 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B04532C11C2EB00A8DDC0 /* PhotoDetailView.swift */; };
 		0CB9AFD82C10554400FACD16 /* CommonUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9AFD72C10554400FACD16 /* CommonUtilities.swift */; };
@@ -57,6 +58,7 @@
 		0C1CE2182C0F43F100A45F61 /* ICCFont-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ICCFont-BoldItalic.ttf"; sourceTree = "<group>"; };
 		0C1CE2192C0F43F100A45F61 /* ICCMonoFont-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ICCMonoFont-Italic.ttf"; sourceTree = "<group>"; };
 		0C1CE21A2C0F43F100A45F61 /* ICCMonoFont-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ICCMonoFont-Bold.ttf"; sourceTree = "<group>"; };
+		0C803D632C132EE800282D78 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		0C8B044F2C11916200A8DDC0 /* SIFeedsDetailsListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIFeedsDetailsListing.swift; sourceTree = "<group>"; };
 		0C8B04532C11C2EB00A8DDC0 /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
 		0CB9AFD72C10554400FACD16 /* CommonUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtilities.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				0CB9AFD92C1055B200FACD16 /* Font */,
 				0CEDC7642C0EF6160062523F /* Assets.xcassets */,
 				0C8B04532C11C2EB00A8DDC0 /* PhotoDetailView.swift */,
+				0C803D632C132EE800282D78 /* NavigationBar.swift */,
 			);
 			path = PBKSPhotos;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				0CEDC77C2C0F3E250062523F /* AppColors.swift in Sources */,
 				0CEDC7822C0F41670062523F /* CustomFonts.swift in Sources */,
 				0C8B04502C11916200A8DDC0 /* SIFeedsDetailsListing.swift in Sources */,
+				0C803D642C132EE800282D78 /* NavigationBar.swift in Sources */,
 				0CEDC76F2C0EF6450062523F /* LargeContentCell.swift in Sources */,
 				0CEDC7742C0F24980062523F /* ServiceManager.swift in Sources */,
 			);
