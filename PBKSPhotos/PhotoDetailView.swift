@@ -11,7 +11,7 @@ struct PhotoDetailView: View {
     var date: String
     var headline: String
     var titleAlias: String
-    @StateObject private var viewModel = PhotosViewModel()
+    @EnvironmentObject var viewModel: PhotosViewModel
     let baseURL = "https://www.punjabkingsipl.in/static-assets/waf-images/{image_path}/{image_name}?v=1.04"
     let detailBaseURL = "https://www.punjabkingsipl.in/apiv3/photo/{title_alias}?is_app=1"
     @Environment(\.presentationMode) var presentationMode
@@ -28,8 +28,10 @@ struct PhotoDetailView: View {
                 Button("Back") {
                     presentationMode.wrappedValue.dismiss()
                 }
+                .foregroundColor(Theme.getColor(named: .white_FFFFFF))
                 Spacer()
             }
+            .background(Theme.getColor(named: .red_C10004))
             if let images = viewModel.photosDetail?.content?.data?.images {
                 TabView {
                     ForEach(images, id: \.data?.imageID) { image in
@@ -38,21 +40,23 @@ struct PhotoDetailView: View {
                             AsyncImage(url: URL(string: imageURL)) { image in
                                 image.resizable()
                                     .scaledToFill()
-                                    .frame(width: UIScreen.main.bounds.width - 30, height: 225)
+                                    .frame(width: UIScreen.main.bounds.width, height: 225)
                             } placeholder: {
                                 ProgressView()
                             }
                         }
                     }
                 }
-                .frame(width: UIScreen.main.bounds.width - 30, height: 225)
+                .frame(width: UIScreen.main.bounds.width, height: 225)
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-//                .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
                 .onAppear {
                     UIPageControl.appearance().currentPageIndicatorTintColor = .red
                 }
             } else {
-                Text("No images available")
+                HStack{
+                    ProgressView()
+                }
+                .frame(width: UIScreen.main.bounds.width, height: 225)
             }
 
             VStack(spacing: 10) {
@@ -85,7 +89,7 @@ struct PhotoDetailView: View {
                 }
                 
                 HStack {
-                    Text("Coaching Moments")
+                    Text(viewModel.photos?.content?.items?.first?.secondaryEntityName ?? "")
                         .foregroundColor(Theme.getColor(named: .black_212121))
                         .font(.custom(CustomFonts.ICCMonoFontBold.name, size: 18))
                     Spacer()

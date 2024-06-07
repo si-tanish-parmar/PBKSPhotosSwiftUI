@@ -67,7 +67,10 @@ struct ContentView: View {
             }
         }
         .fullScreenCover(isPresented: $isDetailViewPresented) {
-            PhotoDetailView(date: selectedDate ?? "", headline: selectedHeadline ?? "", titleAlias: selectedTitleAlias ?? "")
+            PhotoDetailView(date: selectedDate ?? "",
+                            headline: selectedHeadline ?? "",
+                            titleAlias: selectedTitleAlias ?? "")
+                .environmentObject(viewModel)
         }
         .onAppear {
             Task {
